@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameVerse - Your Gaming Paradise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-gamepad"></i> GameVerse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <h1><i class="fas fa-trophy"></i> Welcome to GameVerse</h1>
+            <p>Your Ultimate Gaming Destination</p>
+            <a href="#about" class="btn hero-btn">Explore Now</a>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h4><i class="fas fa-shopping-cart"></i> Your Cart</h4>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cartItems">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="cart-total-price" id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">About Us</h2>
+                <p class="lead mt-4">Discover the passion behind GameVerse</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 scroll-fade">
+                    <div class="about-card text-center">
+                        <div class="about-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Our Mission</h4>
+                        <p>To provide gamers worldwide with the best gaming products and experiences. We believe gaming brings people together and creates unforgettable moments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 scroll-fade">
+                    <div class="about-card text-center">
+                        <div class="about-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Our Community</h4>
+                        <p>Join millions of gamers who trust GameVerse. We've built a vibrant community of passionate players who share tips, strategies, and epic gaming moments.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 scroll-fade">
+                    <div class="about-card text-center">
+                        <div class="about-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Our Promise</h4>
+                        <p>Quality products, competitive prices, and exceptional customer service. We're committed to making your gaming experience extraordinary every single time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6 scroll-fade">
+                    <h3 class="mb-4">Why Choose GameVerse?</h3>
+                    <p>Since 2025, GameVerse has been at the forefront of the gaming industry, delivering cutting-edge products and services to gamers across the globe. Our team of gaming enthusiasts carefully curates every product to ensure you get only the best.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Premium quality gaming gear</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Fast and secure worldwide shipping</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 24/7 customer support</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Exclusive deals and promotions</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 scroll-fade">
+                    <h3 class="mb-4">Our Story</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
+                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Latest Releases</h2>
+                <p class="lead mt-4">Level up your gaming experience</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <span class="product-badge">New</span>
+                        <div class="product-img">
+                            <img src="images/headset.jpg" alt="gamingHeadset"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pro Gaming Headset</h5>
+                            <p class="card-text">7.1 Surround Sound, RGB Lighting, Noise Cancellation</p>
+                            <p class="product-price">$129.99</p>
+                            <button class="btn btn-buy" data-name="Pro Gaming Headset" data-price="129.99" data-icon="fa-headset">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <span class="product-badge">Hot</span>
+                        <div class="product-img">
+                            <img src="images/keyboard.jpg" alt="gamingKeyboard"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mechanical Gaming Keyboard</h5>
+                            <p class="card-text">RGB Backlit, Cherry MX Switches, Programmable Keys</p>
+                            <p class="product-price">$159.99</p>
+                            <button class="btn btn-buy" data-name="Mechanical Gaming Keyboard" data-price="159.99" data-icon="fa-keyboard">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <div class="product-img">
+                            <img src="images/mouse.jpg" alt="gamingMouse"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Precision Gaming Mouse</h5>
+                            <p class="card-text">16000 DPI, 8 Programmable Buttons, Ergonomic Design</p>
+                            <p class="product-price">$79.99</p>
+                            <button class="btn btn-buy" data-name="Precision Gaming Mouse" data-price="79.99" data-icon="fa-mouse">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <span class="product-badge">Sale</span>
+                        <div class="product-img">
+                            <img src="images/monitor.jpg" alt="gamingMonitor"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">4K Gaming Monitor</h5>
+                            <p class="card-text">144Hz, 1ms Response, HDR Support, FreeSync</p>
+                            <p class="product-price">$449.99</p>
+                            <button class="btn btn-buy" data-name="4K Gaming Monitor" data-price="449.99" data-icon="fa-desktop">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <div class="product-img">
+                            <img src="images/chair.jpg" alt="gamingChair"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Gaming Chair Pro</h5>
+                            <p class="card-text">Ergonomic, Adjustable, Premium Leather, Lumbar Support</p>
+                            <p class="product-price">$299.99</p>
+                            <button class="btn btn-buy" data-name="Gaming Chair Pro" data-price="299.99" data-icon="fa-chair">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 scroll-fade">
+                    <div class="card product-card position-relative">
+                        <span class="product-badge">New</span>
+                        <div class="product-img">
+                            <img src="images/mic.jpeg" alt="gamingMic"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Streaming Microphone</h5>
+                            <p class="card-text">Studio Quality, USB Connection, Pop Filter Included</p>
+                            <p class="product-price">$99.99</p>
+                            <button class="btn btn-buy" data-name="Streaming Microphone" data-price="99.99" data-icon="fa-microphone">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">What Gamers Say</h2>
+    <p class="lead mt-3 mb-5">Join thousands of satisfied customers</p>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false">
+
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-card mx-auto" style="max-width: 700px;">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="stars text-center mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"GameVerse knows what we want and delivers accordingly! Very satisfied with the prices and delivery times!"</p>
+            <h6 class="mt-3">- Alex Martinez</h6>
+            <p class="small">Pro Gamer</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto" style="max-width: 700px;">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="stars text-center mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Highly reliable, and I have suggested this website to all my friends!"</p>
+            <h6 class="mt-3">- Sarah Chen</h6>
+            <p class="small">Streamer</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto" style="max-width: 700px;">
+            <div class="testimonial-avatar"><i class="fas fa-user"></i></div>
+            <div class="stars text-center mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"Very nice website. Cheap and reliable and I've been getting my gaming gear from these guys for a long time."</p>
+            <h6 class="mt-3">- Mike Johnson</h6>
+            <p class="small">Content Creator</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-gamepad"></i> GameVerse</h5>
+                    <p class="mt-3">Your trusted partner in gaming. Quality products, exceptional service, unforgettable experiences.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="#testimonials" class="text-white text-decoration-none">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                    <p class="mt-3">Email: support@gameverse.com<br>Phone: +91 123123123</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 GameVerse. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> for gamers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Cart management
+        let cart = [];
+
+        // Get elements
+        const cartIcon = document.getElementById('cartIcon');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartClose = document.getElementById('cartClose');
+        const cartBadge = document.getElementById('cartBadge');
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        const cartFooter = document.getElementById('cartFooter');
+
+        // Toggle cart
+        function toggleCart() {
+            cartSidebar.classList.toggle('active');
+            cartOverlay.classList.toggle('active');
+        }
+
+        cartIcon.addEventListener('click', toggleCart);
+        cartClose.addEventListener('click', toggleCart);
+        cartOverlay.addEventListener('click', toggleCart);
+
+        // Update cart display
+        function updateCart() {
+            // Update badge
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartBadge.textContent = totalItems;
+
+            // Update cart items
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-bag"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                cartFooter.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map((item, index) => `
+                    <div class="cart-item">
+                        <div class="cart-item-icon">
+                            <i class="fas ${item.icon}"></i>
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">${item.price}</div>
+                            <div class="cart-item-controls">
+                                <button class="cart-btn" onclick="decreaseQuantity(${index})">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="cart-quantity">${item.quantity}</span>
+                                <button class="cart-btn" onclick="increaseQuantity(${index})">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                                <button class="cart-remove" onclick="removeItem(${index})">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                cartFooter.style.display = 'block';
+            }
+
+            // Update total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `${total.toFixed(2)}`;
+        }
+
+        // Add to cart
+        function addToCart(name, price, icon) {
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: parseFloat(price),
+                    icon: icon,
+                    quantity: 1
+                });
+            }
+            
+            updateCart();
+        }
+
+        // Increase quantity
+        function increaseQuantity(index) {
+            cart[index].quantity++;
+            updateCart();
+        }
+
+        // Decrease quantity
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        // Remove item
+        function removeItem(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.btn-buy').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = this.getAttribute('data-price');
+                const icon = this.getAttribute('data-icon');
+                
+                addToCart(name, price, icon);
+                
+                this.textContent = 'Added!';
+                this.style.background = '#27ae60';
+                
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                    this.style.background = '';
+                }, 1000);
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'linear-gradient(135deg, #1e272e 0%, #0c1215 100%)';
+            } else {
+                navbar.style.background = 'linear-gradient(135deg, var(--dark) 0%, #1e272e 100%)';
+            }
+        });
+
+        // Checkout button
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            if (cart.length > 0) {
+                alert('Thank you for your order! Total: ' + cartTotal.textContent);
+                cart = [];
+                updateCart();
+                toggleCart();
+            }
+        });
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
